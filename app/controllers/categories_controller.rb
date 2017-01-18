@@ -1,10 +1,14 @@
 class CategoriesController < ApplicationController
+
   def index
     @categories = Category.all
   end
 
   def show
     @category = Category.find(params[:id])
+    @memes = Meme.where(category_id: params[:id])
+    @memes = @category.memes
+    @meme = Meme.new
   end
 
   def new
@@ -30,3 +34,4 @@ class CategoriesController < ApplicationController
     :image_url
     )
   end
+end

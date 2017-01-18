@@ -1,0 +1,18 @@
+<%= form_for [@category, @meme] do |f| %>
+
+  <div>
+    <%= f.label :name, "Name" %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :img_url, "Image Url" %>
+    <%= f.text_field :img_url %>
+  </div>
+
+  <div>
+    <%= f.hidden_field :user_id %>
+  </div>
+  <%= f.submit(value="Add Meme") %>
+
+<% end %>
