@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
+
+  resources :categories do
+    :memes do
+      :reviews
+    end
+  end
+
   root "categories#index"
+
   devise_for :users
 
-  resources :memes
 end
