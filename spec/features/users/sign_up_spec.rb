@@ -1,9 +1,8 @@
 require 'rails_helper'
 
-
-  feature 'sign up' do
+feature 'sign up' do
   # Acceptance Criteria:
-  # * I must specify a valid email address, first name, and last name
+  # * I must specify a valid email address
   # * I must specify a password, and confirm that password
   # * If I do not perform the above, I get an error message
   # * If I specify valid information, I register my account and am authenticated
@@ -14,7 +13,7 @@ require 'rails_helper'
     fill_in 'user_password', with: 'password'
     fill_in 'Password confirmation', with: 'password'
     click_button 'Sign up'
-    expect(page).to have_content("Welcome! You have signed up successfully.")
+    expect(page).to have_content('Welcome! You have signed up successfully.')
     expect(page).to have_content('Logout')
   end
 
@@ -33,5 +32,4 @@ require 'rails_helper'
     click_button 'Sign up'
     expect(page).to have_content("doesn't match")
   end
-
 end
