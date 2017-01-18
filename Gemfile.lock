@@ -53,6 +53,10 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    carrierwave (1.0.0)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
+      mime-types (>= 1.16)
     coderay (1.1.1)
     concurrent-ruby (1.0.4)
     coveralls (0.8.17)
@@ -212,6 +216,7 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
+  carrierwave
   coveralls
   factory_girl
   foundation-rails
@@ -233,4 +238,4 @@ DEPENDENCIES
   valid_attribute
 
 BUNDLED WITH
-   1.13.6
+   1.13.7
