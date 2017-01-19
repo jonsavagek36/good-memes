@@ -6,7 +6,6 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
-    @memes = Meme.where(category_id: params[:id])
     @memes = @category.memes
     @meme = Meme.new
   end
