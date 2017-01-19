@@ -28,6 +28,7 @@ end
 
 group :test do
   gem 'coveralls', require: true
+  gem 'database_cleaner'
 end
 
 group :production do
