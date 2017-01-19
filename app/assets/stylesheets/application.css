@@ -15,40 +15,23 @@
  *= require foundation_and_overrides
 
  */
- .top-bar {
-   position: relative;
-   background-color: #3C3C3C;
- }
 
  a {
    color: white;
  }
 
- .top-bar-section {
-   float: right;
-   margin: 0;
-   position: absolute;
-   transform: translateY(-50%);
-   top: 30%;
-   right: 1%;
-   bottom: 100%;
-   background-color: #3C3C3C;
-   text-align: center;
-   list-style-type: none;
-   color: white;
+ .logo {
+   font-size: 4ch;
+   margin-left: 0.2em;
+ }
+
+ .dropdown {
+   margin: 0.5em;
  }
 
  .navbar-link {
-   margin: .3em;
- }
-
- .logo {
-   font-size: 4ch;
- }
-
- .top-bar-section span {
    display: inline-block;
-   padding: 0;
+   padding: 1em;
    text-align: center;
    margin: 0;
    background-color: #3C3C3C;
