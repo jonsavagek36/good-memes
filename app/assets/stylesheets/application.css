@@ -20,6 +20,10 @@
    color: white;
  }
 
+ * {
+   background-image: url("public/hotsprings.png");
+ }
+
  .logo {
    font-size: 4ch;
    margin-left: 0.2em;
@@ -53,5 +57,5 @@
    background-position: 50% 50%;
    background-repeat:   no-repeat;
    background-size:     cover;
-   margin: 0.1em;
+   margin: 0.5em;
  }
