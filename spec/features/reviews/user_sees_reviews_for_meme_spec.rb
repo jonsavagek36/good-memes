@@ -12,9 +12,9 @@ feature "user sees list of reviews of the meme on the meme show page" do
 
     expect(page).to have_content pizza.name
     expect(page).to have_xpath("//img[contains(@src,pizza.img_url)]")
-    expect(page).to have_content "Reviews:"
+    expect(page).to have_content "Reviews of #{pizza.name}:"
     expect(page).to have_content review.rating
     expect(page).to have_content review.body
-    expect(page).to have_content review.user
+    expect(page).to have_content review.user.email
   end
 end
