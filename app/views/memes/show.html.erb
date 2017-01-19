@@ -1,0 +1,13 @@
+<h1><%= @meme.name %></h1>
+<img width="200", height="200", src="<%= @meme.img_url%>">
+<p><%= @meme.user.email %>
+
+<h3>Reviews of <%= @meme.name %>:</h3>
+<ul>
+  <% @reviews.each do |review| %>
+    <li>Rating: <%= review.rating %> <%= review.body %> Posted by: <%= review.user.email %></li>
+  <% end %>
+<ul>
+
+<h3>Add your own review of <%= @meme.name %></h3>
+<%= render "reviews/new" %>
