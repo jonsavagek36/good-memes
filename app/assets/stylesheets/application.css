@@ -15,32 +15,13 @@
  *= require foundation_and_overrides
 
  */
- .body {
-   margin: 0;
-   padding: 0;
+ .top-bar {
+   position: relative;
+   background-color: #3C3C3C;
  }
 
  a {
    color: white;
- }
- ul {
-   background-color: #3C3C3C;
-   list-style-type: none;
- }
- li {
-   background-color: #3C3C3C;
- }
- .container {
-   padding: 0 auto;
- }
-
- .logo {
-   font-size: 4ch;
- }
-
- .top-bar {
-   position: relative;
-   background-color: #3C3C3C;
  }
 
  .top-bar-section {
@@ -48,17 +29,27 @@
    margin: 0;
    position: absolute;
    transform: translateY(-50%);
-   top: 50%;
+   top: 30%;
    right: 1%;
+   bottom: 100%;
    background-color: #3C3C3C;
    text-align: center;
+   list-style-type: none;
+   color: white;
  }
 
- .top-bar-section li {
-   /*display: inline-block;*/
+ .navbar-link {
+   margin: .3em;
+ }
+
+ .logo {
+   font-size: 4ch;
+ }
+
+ .top-bar-section span {
+   display: inline-block;
    padding: 0;
    text-align: center;
-   margin-left: 0;
-   margin-right: 0;
+   margin: 0;
    background-color: #3C3C3C;
  }

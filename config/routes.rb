@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
 
-  resources :categories do
-    resources :memes do
-      resources :reviews
-    end
-  end
-
   root "categories#index"
 
-  devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :categories, except: [:edit] do
+    resources :memes, except: [:edit, :index]
+  end
 
+  resources :memes, only: [:show] do
+    resource :reviews, except: [:edit, :show, :index]
+  end
+
+    devise_for :users
 end

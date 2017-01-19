@@ -16,12 +16,12 @@
     <a class="logo" href="/">goodmemes 👌</a>
     <ul class="top-bar-section">
       <% if user_signed_in? %>
-        <li>Logged in as <strong><%= current_user.email %></strong>.</li>
-        <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %></li>
-        <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
+        <span>Logged in as <strong><%= current_user.email %></strong></span><!--
+        --><span><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %></span><!--
+        --><span><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></span>
       <% else %>
-        <li><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %></li>
-        <li><%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></li>
+        <span><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %></span><!--
+        --><span><%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></span>
       <% end %>
     </ul>
   </div>
