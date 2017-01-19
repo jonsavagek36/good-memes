@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root "categories#index"
+  root "static_pages#index"
 
   resources :categories, except: [:edit] do
     resources :memes, except: [:edit, :index]
@@ -10,5 +10,5 @@ Rails.application.routes.draw do
     resource :reviews, except: [:edit, :show, :index]
   end
 
-    devise_for :users
+  devise_for :users
 end

@@ -20,6 +20,10 @@
    color: white;
  }
 
+ * {
+   background-image: url("public/hotsprings.png");
+ }
+
  .logo {
    font-size: 4ch;
    margin-left: 0.2em;
@@ -35,4 +39,23 @@
    text-align: center;
    margin: 0;
    background-color: #3C3C3C;
+ }
+
+ #main-page {
+   display: inline-block;
+   list-style: none;
+   width: 100%;
+   clear: both;
+   overflow: auto;
+
+ }
+ #main-list-items {
+   position: relative;
+   float: left;
+   width:  100px;
+   height: 100px;
+   background-position: 50% 50%;
+   background-repeat:   no-repeat;
+   background-size:     cover;
+   margin: 0.5em;
  }
