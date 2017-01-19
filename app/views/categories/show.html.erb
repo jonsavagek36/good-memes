@@ -3,7 +3,7 @@
 <img width="100", height="100", src="<%= @category.image_url%>">
 <ul>
 <% @memes.each do |meme| %>
-  <li><%= meme.name %><img src='<%= meme.img_url %>'> <%= meme.user.username %></li>
+  <li><%= meme.name %><a href="/memes/<%= meme.id %>"><img src='<%= meme.img_url %>'></a> <%= meme.user.email %></li>
 <% end %>
 </ul>
 

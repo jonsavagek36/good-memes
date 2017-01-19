@@ -1,0 +1,20 @@
+<%= form_for [@meme, @review] do |f| %>
+
+  <div>
+    <%= f.label(:rating, "Rating") %>
+    <%= f.collection_radio_buttons(:rating, @rating_collection, :first, :last) %>
+  </div>
+
+  <div>
+    <%= f.label(:body, "Comments:") %>
+    <%= f.text_field(:body) %>
+  </div>
+
+  <div>
+    <%= f.hidden_field :user_id %>
+  </div>
+
+  <div>
+    <%= f.submit("Submit Review") %>
+  </div>
+<% end %>
