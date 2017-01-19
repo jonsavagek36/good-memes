@@ -30,3 +30,4 @@ class CategoriesController < ApplicationController
     :image_url
     )
   end
+end
