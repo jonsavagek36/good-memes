@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
   resources :categories do
-    :memes do
-      :reviews
+    resources :memes do
+      resources :reviews
     end
   end
 
