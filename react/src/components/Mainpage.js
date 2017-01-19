@@ -6,15 +6,18 @@ class Mainpage extends Component {
     this.state = {};
   }
 
-  render() {
-    let random_meme = this.props.memes[Math.floor(Math.random()*this.props.memes.length)]
 
+  render() {
     return (
       <div>
         <h1>HOTT MEMES</h1>
-        <img src={random_meme.url} />
-        <h3>{random_meme.name}</h3>
+        <ul>
+          {this.props.memes.map(function(meme){
+            return <li><a href='/categories'><img src={meme.url} /></a></li>;
+          })}
+        </ul>
       </div>
+
     );
   }
 }
