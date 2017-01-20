@@ -16,4 +16,4 @@ fetch('https://api.imgflip.com/get_memes')
         <App data={data} />,
         document.getElementById('app')
       );
-  })
+  });

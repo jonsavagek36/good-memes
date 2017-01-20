@@ -16,12 +16,13 @@
 
  */
 
+
  a {
    color: white;
  }
 
- * {
-   background-image: url("public/hotsprings.png");
+ body {
+   cursor: url(https://maxcdn.icons8.com/iOS7/PNG/50/Travel/hot_springs-50.png), auto;
  }
 
  .logo {
