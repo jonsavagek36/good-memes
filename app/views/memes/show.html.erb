@@ -8,7 +8,8 @@
 <h3>Reviews of <%= @meme.name %>:</h3>
 <ul class="reviews">
   <% @reviews.each do |review| %>
-    <li><% review.rating.times do %>♨️<% end %> - <%= review.body %> Posted by: <%= review.user.email %></li>
+  <h6> Posted by: <%= review.user.email %> </h6>
+    <li><% review.rating.times do %>♨️<% end %> - <%= review.body %></li>
   <% end %>
 <ul>
 </div>
