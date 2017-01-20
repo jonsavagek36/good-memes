@@ -3,6 +3,9 @@ class MemesController < ApplicationController
 
   def show
     @meme = Meme.find(params[:id])
+    @reviews = @meme.reviews
+    @review = Review.new
+    @rating_collection = Review::RATINGS
   end
 
   def new
@@ -34,12 +37,6 @@ class MemesController < ApplicationController
       flash[:notice] = "You must be logged in to do that"
       redirect_to category_path(@category)
     end
-  end
-
-  def edit
-  end
-
-  def destroy
   end
 
   private
