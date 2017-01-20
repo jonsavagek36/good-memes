@@ -1,6 +1,6 @@
 <%= form_for [@meme, @review] do |f| %>
-
-  <div>
+<div class="review_form">
+  <div class="review_buttons">
     <%= f.label(:rating, "Rating") %>
     <%= f.collection_radio_buttons(:rating, @rating_collection, :first, :last) %>
   </div>
@@ -17,4 +17,7 @@
   <div>
     <%= f.submit("Submit Review") %>
   </div>
+  <%= link_to "Back", :back %>
+</div>
+
 <% end %>
