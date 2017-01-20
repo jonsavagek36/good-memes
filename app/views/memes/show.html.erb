@@ -1,5 +1,6 @@
 <div class="meme_show">
 <h1><%= @meme.name %></h1>
+
 <img src="<%= @meme.img_url%>">
 <p>Created by: <%= @meme.user.email %></p>
 
@@ -9,8 +10,10 @@
 <h3>Reviews of <%= @meme.name %>:</h3>
 <ul class="reviews">
   <% @reviews.each do |review| %>
+
   <h6> Posted by: <%= review.user.email %> </h6>
     <li><% review.rating.times do %>♨️<% end %> - <%= review.body %></li>
+
   <% end %>
 </ul>
 </div>

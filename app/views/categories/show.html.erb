@@ -3,7 +3,9 @@
 
 <ul>
 <% @memes.each do |meme| %>
+
   <a href="/memes/<%= meme.id %>"><img width="150", height="150", src='<%= meme.img_url %>'></a>
+
 <% end %>
 </ul>
 
