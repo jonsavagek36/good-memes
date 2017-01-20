@@ -11,7 +11,7 @@ class Mainpage extends Component {
     console.log(this.props.memes[0]);
     return (
       <div>
-        <h1>HOTT MEMES</h1>
+        <h1>THESE MEMES ARE ON FIIIIIREEEEEE</h1>
         <ul id="main-page">
           {this.props.memes.map(function(meme){
             return <li><a href={"categories/" + meme.id}><img id="main-list-items" src={meme.url} /></a></li>;
