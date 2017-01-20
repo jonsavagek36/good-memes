@@ -16,10 +16,22 @@
 
  */
 
+<<<<<<< HEAD
  .top-bar a {
    color: white;
  }
 
+=======
+
+ a {
+   color: white;
+ }
+
+ body {
+   cursor: url(https://maxcdn.icons8.com/iOS7/PNG/50/Travel/hot_springs-50.png), auto;
+ }
+
+>>>>>>> 5f7cf6a51d2d3013683f32a5b0cc394bec53de1e
  .logo {
    font-size: 4ch;
    margin-left: 0.2em;

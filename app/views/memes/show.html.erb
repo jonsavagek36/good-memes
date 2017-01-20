@@ -1,16 +1,25 @@
 <div class="meme_show">
 <h1><%= @meme.name %></h1>
+<<<<<<< HEAD
 <img src="<%= @meme.img_url%>">
 <p>Created by: <%= @meme.user.email %></p>
 
 <%= render "reviews/new" %>
 <p><%= @meme.user.username %> </p>
+=======
+<img width="200", height="200", src="<%= @meme.img_url%>">
+<p><%= @meme.user.username %>
+>>>>>>> 5f7cf6a51d2d3013683f32a5b0cc394bec53de1e
 
 <h3>Reviews of <%= @meme.name %>:</h3>
 <ul class="reviews">
   <% @reviews.each do |review| %>
+<<<<<<< HEAD
   <h6> Posted by: <%= review.user.email %> </h6>
     <li><% review.rating.times do %>♨️<% end %> - <%= review.body %></li>
+=======
+    <li>Rating: <%= review.rating %> <%= review.body %> Posted by: <%= review.user.username %></li>
+>>>>>>> 5f7cf6a51d2d3013683f32a5b0cc394bec53de1e
   <% end %>
 </ul>
 </div>
