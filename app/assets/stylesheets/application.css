@@ -15,20 +15,7 @@
  *= require foundation_and_overrides
 
  */
-
-<<<<<<< HEAD
-<<<<<<< HEAD
  .top-bar a {
-   color: white;
- }
-
-=======
-
- a {
-=======
-
- .top-bar a {
->>>>>>> e0e6e8d86c2ab7f13b5f2938a68a8e63450b6ef7
    color: white;
  }
 
@@ -36,7 +23,6 @@
    cursor: url(https://maxcdn.icons8.com/iOS7/PNG/50/Travel/hot_springs-50.png), auto;
  }
 
->>>>>>> 5f7cf6a51d2d3013683f32a5b0cc394bec53de1e
  .logo {
    font-size: 4ch;
    margin-left: 0.2em;
