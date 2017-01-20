@@ -61,15 +61,8 @@ ActiveRecord::Schema.define(version: 20170119215825) do
     t.string   "username"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     t.index ["username"], name: "index_users_on_username", unique: true, using: :btree
->>>>>>> 5f7cf6a51d2d3013683f32a5b0cc394bec53de1e
-=======
     t.index ["username"], name: "index_users_on_username", unique: true, using: :btree
-
->>>>>>> e0e6e8d86c2ab7f13b5f2938a68a8e63450b6ef7
   end
 
 end
