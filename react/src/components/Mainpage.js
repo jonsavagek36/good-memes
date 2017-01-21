@@ -8,15 +8,27 @@ class Mainpage extends Component {
 
 
   render() {
-    console.log(this.props.memes[0]);
+
+    let memes;
+
+    if (this.props.memes != undefined) {
+      memes = this.props.memes.map(meme => {
+        return (
+          <li><img src={meme.image_url} />{meme.name}</li>
+        );
+      });
+    } else {
+      memes = [];
+    }
+
     return (
       <div>
         <h1>HOTT MEMES</h1>
-        <ul id="main-page">
-          {this.props.memes.map(function(meme){
-            return <li><a href={"categories/" + meme.id}><img id="main-list-items" src={meme.url} /></a></li>;
-          })}
-        </ul>
+        <div id="main-page">
+          <ul>
+            {memes}
+          </ul>
+        </div>
     </div>
     );
   }

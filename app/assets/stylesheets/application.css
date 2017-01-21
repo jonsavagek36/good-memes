@@ -20,8 +20,9 @@
    color: white;
  }
 
- * {
-   background-image: url("public/hotsprings.png");
+ img {
+   width: 20%;
+   height: 20%;
  }
 
  .logo {

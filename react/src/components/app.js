@@ -5,28 +5,35 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      memes: this.props.data.memes,
-      randMeme: this.props.data.memes[0]
+      memes: []
     };
-    this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
-    let random_meme = this.state.memes[Math.floor(Math.random()*this.state.memes.length)];
-    this.setState({ randMeme: random_meme });
+  componentDidMount() {
+    this.getCategories();
+  }
+
+  getCategories() {
+    fetch('/api/v1/categories.json')
+      .then(response => response.json())
+      .then(res => {
+        this.setState({ memes: res });
+      })
   }
 
   render() {
+    let theRender;
+    let allTheMemes = [];
+    if (this.state.memes.length > 0) {
+      allTheMemes = this.state.memes;
+    }
+
     return (
       <div>
-        <Mainpage
-          memes={this.state.memes}
-          handleClick={this.handleClick}
-          randomMeme={this.state.randMeme}
-            />
+        <Mainpage memes={allTheMemes} />
       </div>
-      );
-    }
+    );
+  }
 }
 
 export default App;
