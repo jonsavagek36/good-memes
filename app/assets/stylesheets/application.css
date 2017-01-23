@@ -46,9 +46,10 @@
    width: 100%;
    clear: both;
    overflow: auto;
-
+   margin-left: 0.4%;
  }
- #main-list-items {
+
+ #main-list-items img {
    position: relative;
    float: left;
    width:  100px;
@@ -57,6 +58,25 @@
    background-repeat:   no-repeat;
    background-size:     cover;
    margin: 0.5em;
+   border-radius: 15px;
+   box-shadow: 5px 5px #3C3C3C;
+ }
+
+ #new-cat {
+   position: relative;
+   float: left;
+   width:  100px;
+   height: 100px;
+   background-position: 50% 50%;
+   background-repeat:   no-repeat;
+   background-size:     cover;
+   margin: 0.5em;
+   border-radius: 15px;
+   box-shadow: 5px 5px #3C3C3C;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
  }
  .meme_form {
    width: 20%;
@@ -88,4 +108,9 @@
 }
 .reviews {
   list-style-type: none;
+}
+#meme img {
+  height: 150px;
+  width: 150px;
+  border-radius: 15px;
 }

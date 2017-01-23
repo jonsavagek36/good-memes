@@ -1,19 +1,9 @@
 <div class="categories_show">
-<h1><%= @category.name %></h1>
-
+    <h1><%= @category.name %></h1>
 <ul>
 <% @memes.each do |meme| %>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  <a href="/memes/<%= meme.id %>"><img width="150", height="150", src='<%= meme.img_url %>'></a>
-=======
-  <li><%= meme.name %><a href="/memes/<%= meme.id %>"><img src='<%= meme.img_url %>'></a> <%= meme.user.username %></li>
->>>>>>> 5f7cf6a51d2d3013683f32a5b0cc394bec53de1e
-=======
+  <a id="meme" href="/memes/<%= meme.id %>"><img src='<%= meme.img_url %>'></a>
 
-  <a href="/memes/<%= meme.id %>"><img width="150", height="150", src='<%= meme.img_url %>'></a>
-
->>>>>>> e0e6e8d86c2ab7f13b5f2938a68a8e63450b6ef7
 <% end %>
 </ul>
 
