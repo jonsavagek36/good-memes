@@ -16,5 +16,11 @@ Rails.application.routes.draw do
     end
   end
 
+  # resources :users, :only =>[:show, :index]
+  devise_for :admins
+
   devise_for :users
+  scope "/admin" do
+    resources :users, only: [:index, :destroy]
+  end
 end
