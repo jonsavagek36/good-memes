@@ -26,7 +26,7 @@
           <li>
           <a href="#">Logged in as <%= current_user.email %></a>
             <ul class="menu vertical">
-              <% if current_user.admin? %>
+              <% if current_user.admin == true  %>
               <li><%= link_to 'View All Users', users_path, :class => 'navbar-link' %></li>
               <% end %>
               <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %></li>

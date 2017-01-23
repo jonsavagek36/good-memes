@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  root "static_pages#index"
+  root "categories#index"
+
+  post "/archive_user", to: "users#archive_user"
 
   resources :categories, except: [:edit] do
     resources :memes, except: [:edit, :index]
@@ -17,7 +19,6 @@ Rails.application.routes.draw do
   end
 
   # resources :users, :only =>[:show, :index]
-  devise_for :admins
 
   devise_for :users
   scope "/admin" do

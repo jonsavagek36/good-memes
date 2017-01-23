@@ -10,6 +10,7 @@ protected
       :username,
       :email,
       :password,
+      :admin,
       :password_confirmation,
       :remember_me
     ]
