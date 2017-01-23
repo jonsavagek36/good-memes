@@ -11,7 +11,7 @@ feature "user can add reviews for a meme" do
     visit meme_path(pizza)
 
     choose "♨️"
-    fill_in "Comments:", with: "Absolute garbage"
+    fill_in "Comment:", with: "Absolute garbage"
     click_button "Submit Review"
 
     expect(page).to have_content "Review added successfully"
