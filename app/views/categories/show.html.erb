@@ -1,12 +1,11 @@
-<h1><%= @category.name %></h1>
-
-<img width="100", height="100", src="<%= @category.image_url%>">
+<div class="categories_show">
+    <h1><%= @category.name %></h1>
 <ul>
 <% @memes.each do |meme| %>
-  <li><%= meme.name %><a href="/memes/<%= meme.id %>"><img src='<%= meme.img_url %>'></a> <%= meme.user.username %></li>
+  <a id="meme" href="/memes/<%= meme.id %>"><img src='<%= meme.img_url %>'></a>
+
 <% end %>
 </ul>
 
-<h3>Add a meme!</h3>
-
 <%= render "memes/form" %>
+</div>
