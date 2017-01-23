@@ -19,7 +19,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Mainpage
+      <Mainpage
           memes={this.state.memes}
           handleClick={this.handleClick}
           randomMeme={this.state.randMeme}
