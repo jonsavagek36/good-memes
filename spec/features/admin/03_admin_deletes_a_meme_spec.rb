@@ -14,7 +14,7 @@ feature 'deleting a meme' do
     visit '/'
     click_link("#{sk.id}")
 
-    click_link("delete-#{fri.id}")
+    click_link("delete-meme-#{fri.id}")
 
     expect(page).to have_content(sk.name)
     expect(page).to have_content("Meme Deleted!")
@@ -31,7 +31,7 @@ feature 'deleting a meme' do
 
     visit category_path(sk)
 
-    click_link("delete-#{fri.id}")
+    click_link("delete-meme-#{fri.id}")
 
     expect(page).to have_content(sk.name)
     expect(page).to have_content("Meme Deleted!")

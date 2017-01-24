@@ -16,7 +16,7 @@ feature 'deleting a category' do
 
     click_link("#{sk.id}")
 
-    click_link("delete-#{sk.id}")
+    click_link("delete-category-#{sk.id}")
 
     expect(num).to equal(Category.all.length + 1)
     expect(page).to have_xpath("//img[contains(@src,ek.image_url)]")
