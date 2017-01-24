@@ -1,11 +1,16 @@
 import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/app';
+import Reviews from './components/Reviews';
 
 $(document).ready(function() {
-  ReactDOM.render(
-    <App />,
-    document.getElementById('app')
-  );
+  if (document.getElementById('reviewsDiv')) {
+    let id = parseInt(document.getElementById('reviewsDiv').dataset.id)
+    ReactDOM.render(
+      <Reviews
+        id={id}
+          />,
+      document.getElementById('reviewsDiv')
+    );
+  }
 });
