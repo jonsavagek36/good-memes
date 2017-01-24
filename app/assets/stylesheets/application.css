@@ -15,14 +15,20 @@
  *= require foundation_and_overrides
 
  */
-
- a {
+ .top-bar a {
    color: white;
  }
 
- img {
-   width: 20%;
-   height: 20%;
+ .top-bar-right img {
+   height: 50px;
+   width: 50px;
+   border-radius: 50%;
+   float: left;
+   margin-top: 15px;
+ }
+
+ body {
+   cursor: url(https://maxcdn.icons8.com/iOS7/PNG/50/Travel/hot_springs-50.png), auto;
  }
 
  .logo {
@@ -48,9 +54,10 @@
    width: 100%;
    clear: both;
    overflow: auto;
-
+   margin-left: 0.4%;
  }
- #main-list-items {
+
+ #main-list-items img {
    position: relative;
    float: left;
    width:  100px;
@@ -59,4 +66,76 @@
    background-repeat:   no-repeat;
    background-size:     cover;
    margin: 0.5em;
+   border-radius: 15px;
+   box-shadow: 5px 5px #3C3C3C;
  }
+
+ #new-cat {
+   position: relative;
+   float: left;
+   width:  100px;
+   height: 100px;
+   background-position: 50% 50%;
+   background-repeat:   no-repeat;
+   background-size:     cover;
+   margin: 0.5em;
+   border-radius: 15px;
+   box-shadow: 5px 5px #3C3C3C;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+ }
+ .meme_form {
+   width: 20%;
+   margin-left: auto;
+   margin-right: auto;
+ }
+ .meme_show {
+   position: relative;
+   text-align: center;
+ }
+ .review_form {
+   margin-left: auto;
+   margin-right: auto;
+   width: 35%;
+   white-space: nowrap;
+ }
+ .categories_show {
+   text-align: center;
+ }
+.user_form {
+  text-align: center;
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.user_form img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+#error_explanation h2 {
+  color: red;
+  font-size: 1em;
+}
+.reviews {
+  list-style-type: none;
+  text-align: center;
+  width: 50%;
+  margin-left: 25%;
+}
+#meme img {
+  height: 150px;
+  width: 150px;
+  border-radius: 15px;
+}
+.review {
+  border-color: black;
+  border-style: solid;
+  border-width: thin;
+  margin: 2px;
+  border-radius: 15px;
+  background-color: #3C3C3C;
+  color: white;
+}

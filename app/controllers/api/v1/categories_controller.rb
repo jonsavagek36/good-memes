@@ -1,23 +1,21 @@
-class Api::V1::CategoriesController < Api::V1::BaseController
+
+class Api::V1::CategoriesController < ApplicationController
+  skip_before_filter :verify_authenticity_token
 
   def index
-    respond_with Category.all
+    @categories = Category.all
+    render json: @categories
   end
 
-  def show
-    @category = Category.find(params[:id])
-    @memes = @category.memes
-    respond_with @category, json: @category
-  end
-
-  def create
-    respond_with :api, :v1, Category.create(category_params)
-  end
-
-  private
-
-  def category_params
-    params.require(:category).permit(:id, :name, :description)
-  end
-
+ #  def create
+ #    data = JSON.parse(request.body.read)
+ #   @category = Category.new(name: data["name"], image_url: data["image_url"])
+ #   if @category.save!
+ #     @categories = Category.all
+ #     @categories.order(:id)
+ #     render json: @categories
+ #   else
+ #     render json: {message: "Did not work"}, status: 404
+ #   end
+ # end
 end

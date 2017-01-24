@@ -2,6 +2,16 @@ class CategoriesController < ApplicationController
 
   def index
     @categories = Category.all
+    respond_to do |format|
+      format.html
+      format.json { render json: @categories }
+    end
+    if params[:search]
+      @categories = Category.search(params[:search]).order("created_at DESC")
+      @search_term = params[:search]
+    else
+      @categories = Category.all.order("created_at DESC")
+    end
   end
 
   def show
