@@ -11,36 +11,39 @@
     <%= csrf_meta_tags %>
   </head>
 
-<div class="top-bar">
-  <div class="top-bar-title">
-    <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
-      <button class="menu-icon dark" type="button" data-toggle></button>
-    </span>
-    <a class="logo" href="/">goodmemes 👌</a>
-  </div>
-
-  <div id="responsive-menu">
-    <div class="top-bar-right">
-      <% if user_signed_in? %>
-        <ul class="dropdown menu" data-dropdown-menu>
-          <li>
-          <a href="#">Logged in as <%= current_user.email %></a>
-            <ul class="menu vertical">
-              <% if current_user.admin == true  %>
-              <li><%= link_to 'View All Users', users_path, :class => 'navbar-link' %></li>
-              <% end %>
-              <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %></li>
-              <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %></li>
-            </ul>
-          </li>
-      <% else %>
-        <span><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %></span><!--
-        --><span><%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></span>
-      <% end %>
-      </div>
-    </div>
+<nav class="top-bar">
+  <ul class="title-area">
+    <li class="name"><a class="logo" href="/">goodmemes 👌</a></li>
   </ul>
-</div>
+  <section class="top-bar-section">
+    <ul class="left">
+      <li><%= form_tag(categories_path, :method => "get", id: "search-form") do %>
+        <%= text_field_tag :search, params[:search], placeholder: "Search Categories" %>
+      <% end %>🔍</li>
+    </ul>
+    <ul class="right">
+      <div id="responsive-menu">
+        <% if user_signed_in? %>
+          <ul class="dropdown menu" data-dropdown-menu>
+            <li>
+            <a href="#">Logged in as <%= current_user.email %></a>
+              <ul class="menu vertical">
+                <% if current_user.admin == true  %>
+                <li><%= link_to 'View All Users', users_path, :class => 'navbar-link' %></li>
+                <% end %>
+                <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %></li>
+                <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %></li>
+              </ul>
+            </li>
+        <% else %>
+      <span><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %></span><!--
+          --><span><%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></span>
+        <% end %>
+      </div>
+    </ul>
+    </ul>
+  </section>
+</nav>
   <body>
 
     <% if notice %>
