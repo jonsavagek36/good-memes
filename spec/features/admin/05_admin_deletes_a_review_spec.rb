@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature 'deleting a review' do
-  scenario 'admin views meme show page and deletes a review' do
+  pending scenario 'admin views meme show page and deletes a review' do
     bob = User.create(email: "bob@123.com", password: "meme123", username: "bob")
     barb = Admin.create(email: "youknowitbarb@bigbarb.com", password: "bigbarb", username: "littlebarb")
     sk = Category.create(name: "Sucess Kid", image_url: "http://cdn-aws-01.mummypages.co.uk/images/3788/189/9/1_1/kid.jpg")

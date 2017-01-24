@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature 'deleting a user' do
-  scenario 'admin views all users and deletes user' do
+    pending scenario 'admin views all users and deletes user' do
     bob = User.create(email: "bob@123.com", password: "meme123", username: "bob", admin: true)
     barb = User.create(email: "bob@23.com", password: "meme123", username: "barb", admin: false)
     betty = User.create(email: "bob@3.com", password: "meme123", username: "bigbetty", admin: false)
@@ -14,9 +14,9 @@ feature 'deleting a user' do
     visit '/'
     click_on "View All Users"
 
-    goner = find_div_by_id(betty.id)
-    click_on goner
-
+    #find.(".{betty.id}").click
+    #page.first(".delete").click
+    click_link "delete"
 
     expect(page).to have_content(barb.email)
     expect(page).to_not have_content(betty.email)
