@@ -21,12 +21,6 @@ class App extends Component {
   }
 
   render() {
-    let theRender;
-    let allTheMemes = [];
-    if (this.state.memes.length > 0) {
-      allTheMemes = this.state.memes;
-    }
-
     return (
       <div>
       <h1>THESE MEMES ARE ON 🔥🔥🔥 </h1>

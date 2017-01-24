@@ -3,8 +3,6 @@
 <p>Created by: <%= @meme.user.username %></p>
 <img src="<%= @meme.img_url%>">
 
-<%= render "reviews/new" %>
-
 <h3>Reviews of <%= @meme.name %>:</h3>
 
 <div id='reviewsDiv' data-id='<%= @meme.id %>'>

@@ -4,7 +4,7 @@ import Downvote from './Downvote';
 
 class Review extends Component {
   constructor(props) {
-    super(props); 
+    super(props);
     this.state = {
       upvotes: 0,
       downvotes: 0
@@ -54,11 +54,16 @@ class Review extends Component {
 
   render() {
 
+    let hotRating = '';
+    for (let i = 0; i < this.props.review.rating; i++) {
+      hotRating += '♨️';
+    }
+
     return (
       <div>
         <div>
           Rating:
-          {this.props.review.rating}
+          {hotRating}
         </div>
         <div>
           {this.props.review.body}
