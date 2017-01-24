@@ -14,4 +14,6 @@ class User < ApplicationRecord
   has_many :memes
   has_many :reviews
   mount_uploader :avatar, AvatarUploader
+  has_many :upvotes
+  has_many :downvotes
 end

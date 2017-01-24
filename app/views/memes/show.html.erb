@@ -6,12 +6,9 @@
 <%= render "reviews/new" %>
 
 <h3>Reviews of <%= @meme.name %>:</h3>
-<ul class="reviews">
-  <% @reviews.each do |review| %>
-    <div class="review">
-      <h6> Posted by: <%= review.user.username %> </h6>
-      <li><% review.rating.times do %>♨️<% end %> - <%= review.body %></li>
-    </div>
-  <% end %>
-</ul>
+
+<div id='reviewsDiv' data-id='<%= @meme.id %>'>
 </div>
+
+<h3>Add your own review of <%= @meme.name %></h3>
+<%= render "reviews/new" %>
