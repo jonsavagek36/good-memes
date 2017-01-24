@@ -1,5 +1,6 @@
 <div class="categories_show">
     <h1><%= @category.name %></h1>
+    <img src='<%= @category.image_url %>' />
 <ul>
 <% @memes.each do |meme| %>
   <a id="meme" href="/memes/<%= meme.id %>"><img src='<%= meme.img_url %>'></a>

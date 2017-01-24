@@ -9,6 +9,9 @@ class User < ApplicationRecord
   uniqueness: { case_sensitive: false }
   validates :password, presence: true
   validates :username, presence: true, uniqueness: true
+  validates :admin, default: false
 
+  has_many :memes
+  has_many :reviews
   mount_uploader :avatar, AvatarUploader
 end

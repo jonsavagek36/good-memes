@@ -26,8 +26,9 @@ class App extends Component {
       <h1>THESE MEMES ARE ON 🔥🔥🔥 </h1>
       <ul id="main-page">
         {this.state.categories.map(function(meme){
-          return <li key={meme.id}><a href={"categories/" + meme.id}><img id="main-list-items" src={meme.image_url} /></a></li>;
+          return <li key={meme.id}><a id="main-list-items" href={"categories/" + meme.id}><img width="100" height="100" src={meme.image_url} /></a></li>;
         })}
+        <li><a href='/categories/new' id="new-cat" >Add New Category</a></li>
       </ul>
       </div>
       );
