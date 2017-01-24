@@ -22,6 +22,7 @@
   <div id="responsive-menu">
     <div class="top-bar-right">
       <% if user_signed_in? %>
+      <img class='profile_photo' src="<%= current_user.avatar %>">
         <ul class="dropdown menu" data-dropdown-menu>
           <li>
           <a href="#">Logged in as <%= current_user.email %></a>
