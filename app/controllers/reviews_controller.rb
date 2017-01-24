@@ -25,13 +25,22 @@ class ReviewsController < ApplicationController
       @rating_collection = Review::RATINGS
       render '/memes/show'
     end
-end
+  end
 
-private
- def params_strong
-   params.require(:review).permit(
-     :rating,
-     :body
-   )
- end
+  def destroy
+    @review = Review.find(params[:meme_id])
+    @meme = @review.meme
+    @review.destroy
+    flash[:notice] = "Review Deleted!"
+    redirect_to meme_path(@meme)
+  end
+
+  private
+
+   def params_strong
+     params.require(:review).permit(
+       :rating,
+       :body
+     )
+   end
 end
