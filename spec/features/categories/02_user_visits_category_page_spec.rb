@@ -11,9 +11,11 @@ feature "user visits meme category page" do
   #   expect(page).to have_xpath("//img[contains(@src,'kermit.com')]")
   # end
    scenario "user sees individual memes" do
-    bob = User.create(email: "bob@123.com", password: "meme123", username: "bob")
+    bob = User.create(email: "bob@123.com", password: "meme123", username: "bob", admin: false, id: 400)
     evil_kermit = Category.create(name:"Evil Kermit", image_url: "kermit.com")
     evil_kermit1 = Meme.create(name: "Evil Kermit 1", img_url: "kermit.com/1", category: evil_kermit, user: bob)
+
+    sign_in bob
 
     visit category_path(evil_kermit)
 
