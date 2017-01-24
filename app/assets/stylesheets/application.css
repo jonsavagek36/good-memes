@@ -19,6 +19,14 @@
    color: white;
  }
 
+ .top-bar-right img {
+   height: 50px;
+   width: 50px;
+   border-radius: 50%;
+   float: left;
+   margin-top: 15px;
+ }
+
  body {
    cursor: url(https://maxcdn.icons8.com/iOS7/PNG/50/Travel/hot_springs-50.png), auto;
  }
@@ -101,6 +109,12 @@
   width: 20%;
   margin-left: auto;
   margin-right: auto;
+}
+.user_form img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
 }
 #error_explanation h2 {
   color: red;
