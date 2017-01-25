@@ -10,7 +10,9 @@
   <% @reviews.each do |review| %>
     <div class="review">
       <h6> Posted by: <%= review.user.username %> </h6>
-      <li><% review.rating.times do %>♨️<% end %> - <%= review.body %></li>
+      <li><% review.rating.times do %>♨️<% end %></li>
+      <li class="profile_container"><img class="profile_photo" height="40" width="40" src="<%= review.user.avatar %>"></li>
+      <li><%= review.body %></li>
     </div>
   <% end %>
 </ul>
