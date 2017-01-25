@@ -23,9 +23,7 @@ feature "profile photo" do
     fill_in 'Password', with: sharona.password
     click_button "Log in"
     click_link "Edit profile"
-    attach_file "Choose File", "#{Rails.root}/spec/support/images/twitter-egg-icon.jpg"
-    click_button "Update"
-    visit root_path
+    attach_file "Avatar", "#{Rails.root}/spec/support/images/HotSprings.png"
     expect(page).to have_content(sharona.email)
     expect(page).to have_xpath("//img")
   end
@@ -39,5 +37,8 @@ feature "profile photo" do
     fill_in 'Password', with: sharona.password
     click_button "Log in"
     click_link "Edit profile"
+    expect(page).to have_content(sharona.email)
+    attach_file "Avatar", "#{Rails.root}/spec/support/images/HotSprings.png"
+    expect(page).to have_xpath("//img")
   end
 end
