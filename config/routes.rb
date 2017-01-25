@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     resource :reviews, except: [:edit, :show, :index]
   end
 
+
   namespace :api do
     namespace :v1 do
       resources :categories, only: [:index, :create]
@@ -21,6 +22,7 @@ Rails.application.routes.draw do
   # resources :users, :only =>[:show, :index]
 
   devise_for :users
+  resources :users, only: [:show]
   scope "/admin" do
     resources :users, only: [:index, :destroy]
   end

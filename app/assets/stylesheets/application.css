@@ -25,6 +25,14 @@
  }
 
  .profile_photo {
+   height: 150px;
+   width: 150px;
+   border-radius: 50%;
+ }
+
+ .profile_thumb {
+   height: 40px;
+   width: 40px;
    border-radius: 50%;
  }
 
@@ -46,7 +54,7 @@
  }
 
  .logo {
-   font-size: 4ch;
+   font-size: 2em;
    margin-left: 0.2em;
  }
 
@@ -130,11 +138,6 @@
   margin-right: auto;
 }
 
-.user_form img {
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
-}
 
 #error_explanation h2 {
   color: red;
@@ -163,6 +166,7 @@
   border-radius: 15px;
   background-color: #3C3C3C;
   color: white;
+  overflow-wrap: break-word;
 }
 
 .profile_container {
