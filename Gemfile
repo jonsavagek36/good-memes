@@ -8,6 +8,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'devise'
 gem 'responders'
+gem 'rb-readline'
 
 
 group :development do
