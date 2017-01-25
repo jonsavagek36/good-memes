@@ -1,7 +1,12 @@
 AllCops:
   Exclude:
     - 'db/schema.rb'
-    - 'react'
+    - 'react/src/main.js'
+    - 'react/src/components/app.js'
+    - 'react/src/components/Downvote.js'
+    - 'react/src/components/Review.js'
+    - 'react/src/components/Reviews.js'
+    - 'react/src/components/Upvote.js'
   #DisplayCopNames: true
 
 AccessorMethodName:
