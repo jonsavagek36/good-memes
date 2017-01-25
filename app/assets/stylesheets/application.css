@@ -15,8 +15,22 @@
  *= require foundation_and_overrides
 
  */
+
  .top-bar a {
    color: white;
+ }
+
+ #responsive-menu {
+   float: right;
+ }
+
+ .profile_photo {
+   border-radius: 50%;
+ }
+
+
+ .menu {
+   margin-top: 7px;
  }
 
  .top-bar-right img {
@@ -86,51 +100,62 @@
    justify-content: center;
    text-align: center;
  }
+
  .meme_form {
    width: 20%;
    margin-left: auto;
    margin-right: auto;
  }
+
  .meme_show {
    position: relative;
    text-align: center;
  }
+
  .review_form {
    margin-left: auto;
    margin-right: auto;
    width: 35%;
    white-space: nowrap;
  }
+
  .categories_show {
    text-align: center;
  }
+
 .user_form {
   text-align: center;
   width: 20%;
   margin-left: auto;
   margin-right: auto;
 }
+
 .user_form img {
   height: 150px;
   width: 150px;
   border-radius: 50%;
 }
+
 #error_explanation h2 {
   color: red;
   font-size: 1em;
 }
+
 .reviews {
   list-style-type: none;
   text-align: center;
   width: 50%;
   margin-left: 25%;
 }
+
 #meme img {
   height: 150px;
   width: 150px;
   border-radius: 15px;
 }
+
 .review {
+  position: relative;
   border-color: black;
   border-style: solid;
   border-width: thin;
@@ -138,4 +163,11 @@
   border-radius: 15px;
   background-color: #3C3C3C;
   color: white;
+}
+
+.profile_container {
+  float: left;
+  position: absolute;
+  top: 5%;
+  left: 1%;
 }
