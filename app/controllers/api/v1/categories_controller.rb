@@ -1,3 +1,4 @@
+
 class Api::V1::CategoriesController < ApplicationController
   skip_before_filter :verify_authenticity_token
 
