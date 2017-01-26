@@ -3,22 +3,10 @@
 <p>Created by: <%= @meme.user.username %></p>
 <img src="<%= @meme.img_url%>">
 
-<% if current_user.nil? == false && current_user.admin == true %>
-  <div class={@meme.id}><%= link_to "Delete Meme", category_meme_path(@meme), method: :delete, id: "delete-meme-#{@meme.id}" %></div>
-<% end %>
-<%= render "reviews/new" %>
-
 <h3>Reviews of <%= @meme.name %>:</h3>
-<ul class="reviews">
-  <% @reviews.each do |review| %>
-    <div class="review">
-      <h6> Posted by: <%= review.user.username %> </h6>
-      <li><% review.rating.times do %>♨️<% end %> - <%= review.body %>
-      <% if current_user.nil? == false && current_user.admin == true %>
-        <div class={review.id}><%= link_to "Delete Review", meme_reviews_path(review), method: :delete, id: "delete-#{review.id}" %></div>
-      <% end %></li>
-    </div>
-  <% end %>
-</ul>
-
+<div id='reviewsDiv' data-id='<%= @meme.id %>'>
 </div>
+<% if current_user.nil? == false && current_user.admin == true %>
+    <div class={@meme.id}><%= link_to "Delete Meme", category_meme_path(@meme), method: :delete, id: "delete-meme-#{@meme.id}" %></div>
+  <% end %>
+<%= render "reviews/new" %>

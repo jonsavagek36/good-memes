@@ -9,15 +9,22 @@ class App extends Component {
   }
 
   componentDidMount(){
+    setTimeout(this.updatePage(), 1000);
+  }
+
+  updatePage() {
     $.ajax({
         method: "GET",
         url: "/categories.json",
       })
       .done(data => {
-        this.setState({
-          categories: data
-        });
+        if (data != this.state.categories) {
+          this.setState({
+            categories: data
+          });
+        }
       });
+    setTimeout(this.updatePage(), 9999);
   }
 
   render() {
