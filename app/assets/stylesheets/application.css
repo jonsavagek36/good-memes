@@ -18,10 +18,19 @@
 
  .top-bar a {
    color: white;
+   font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
  }
 
  #responsive-menu {
    float: right;
+ }
+
+ h1 {
+   text-align: center;
+ }
+
+ h3 {
+   text-align: center;
  }
 
  .profile_photo {
@@ -47,10 +56,6 @@
    border-radius: 50%;
    float: left;
    margin-top: 15px;
- }
-
- body {
-   cursor: url(https://maxcdn.icons8.com/iOS7/PNG/50/Travel/hot_springs-50.png), auto;
  }
 
  .logo {

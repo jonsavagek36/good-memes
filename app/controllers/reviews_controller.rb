@@ -1,7 +1,14 @@
 class ReviewsController < ApplicationController
   before_action :authenticate_user!
 
- def new
+  def index
+    if current_user.admin
+      @reviews = Review.all
+    end
+  end
+
+
+  def new
    @meme = Meme.find(params[:meme_id])
    @user = current_user.id
    @review = Review.new
@@ -9,7 +16,7 @@ class ReviewsController < ApplicationController
    @rating_collection = Review::RATINGS
  end
 
- def create
+  def create
     @meme = Meme.find(params[:meme_id])
     @user = current_user
     @review = Review.new(params_strong)
@@ -25,13 +32,22 @@ class ReviewsController < ApplicationController
       @rating_collection = Review::RATINGS
       render '/memes/show'
     end
-end
+  end
 
-private
- def params_strong
-   params.require(:review).permit(
-     :rating,
-     :body
-   )
- end
+  def destroy
+    @review = Review.find(params[:meme_id])
+    @meme = @review.meme
+    @review.destroy
+    flash[:notice] = "Review Deleted!"
+    redirect_to meme_path(@meme)
+  end
+
+  private
+
+   def params_strong
+     params.require(:review).permit(
+       :rating,
+       :body
+     )
+   end
 end
