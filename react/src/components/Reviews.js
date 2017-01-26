@@ -6,8 +6,8 @@ class Reviews extends Component {
     super(props);
     this.state = {
       reviews: []
-    }; 
-  }
+    };
+  } 
 
   componentDidMount() {
     fetch(`/api/v1/memes/${this.props.id}/reviews.json`)
