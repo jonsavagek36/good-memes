@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature "user can add reviews for a meme" do
+pending feature "user can add reviews for a meme" do
 
   pending scenario "adds a review for a meme successfully" do
     bob = FactoryGirl.create(:user)
