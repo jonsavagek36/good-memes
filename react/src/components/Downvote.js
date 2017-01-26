@@ -25,7 +25,7 @@ class Downvote extends Component {
     return (
       <div>
         <div onClick={handleDownvote}>
-          Downvote
+          👎 Downvote
         </div> {this.props.downvotes}
       </div>
     );

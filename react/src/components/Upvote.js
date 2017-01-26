@@ -25,7 +25,7 @@ class Upvote extends Component {
     return (
       <div>
         <div onClick={handleUpvote}>
-          Upvote
+          👍 Upvote
         </div> {this.props.upvotes}
       </div>
     );

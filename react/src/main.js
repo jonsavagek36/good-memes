@@ -6,10 +6,12 @@ import App from './components/App';
 
 $(document).ready(function() {
   if (document.getElementById('reviewsDiv')) {
-    let id = parseInt(document.getElementById('reviewsDiv').dataset.id)
+    let id = parseInt(document.getElementById('reviewsDiv').dataset.id);
+    let user = document.getElementById('reviewsDiv').dataset.user;
     ReactDOM.render(
       <Reviews
         id={id}
+        user={user}
           />,
       document.getElementById('reviewsDiv')
     );

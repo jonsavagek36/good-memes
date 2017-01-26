@@ -7,10 +7,9 @@
 
 <h3>Reviews of <%= @meme.name %>:</h3>
 
+<div id='reviewsDiv' data-id='<%= @meme.id %>' data-user='<%= @user %>'>
 </div>
 
-<div id='reviewsDiv' data-id='<%= @meme.id %>'>
-</div>
 <% if current_user.admin %>
   <%= link_to "Delete Reviews", reviews_path %>
 <% end %>
