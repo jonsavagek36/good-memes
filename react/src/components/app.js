@@ -18,7 +18,6 @@ class App extends Component {
         url: "/categories.json",
       })
       .done(data => {
-
           this.setState({
             categories: data
           });
