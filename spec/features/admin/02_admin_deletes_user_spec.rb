@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 feature 'deleting a user' do
+
     scenario 'admin views all users and deletes user' do
     bob = FactoryGirl.create(:user, admin: true)
     barb = FactoryGirl.create(:user, email: "bob@23.com", password: "meme123", username: "barb", admin: false)

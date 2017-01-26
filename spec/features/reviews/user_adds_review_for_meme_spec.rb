@@ -11,7 +11,7 @@ feature "user can add reviews for a meme" do
     sign_in bob
     visit meme_path(pizza)
 
-    choose "♨️"
+    choose "review_rating_2"
     fill_in "Comment:", with: "Absolute garbage"
     click_button "Submit Review"
 

@@ -8,7 +8,7 @@ A rails app that allows users to post hot new memes from around the web. Users c
 [Click Here To View Heroku Application](https://good-memes.herokuapp.com/)
 
 ## ER Diagram
-![ER Diagram](http://imgur.com/a/HbusY)
+![ER Diagram](GoodMemesERD.png)
 ## Challenges Faced
 * Incorporating Devise for user authentication and an admin interface
 * Utilizing the Rails back-end as an API for use with Fetch calls
