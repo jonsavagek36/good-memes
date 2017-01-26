@@ -39,6 +39,14 @@ class MemesController < ApplicationController
     end
   end
 
+  def destroy
+    @meme = Meme.find(params[:category_id])
+    @category = @meme.category
+    @meme.destroy
+    flash[:notice] = "Meme Deleted!"
+    redirect_to category_path(@category)
+  end
+
   private
 
   def meme_params
