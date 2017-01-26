@@ -3,9 +3,10 @@ class UserMailer < ActionMailer::Base
 
   def notice(review)
     @review = review
-    @user = @review.meme.user.email
+    if @review.meme.user
+      @user = @review.meme.user.email
+      mail(to: review.meme.user.email , subject: "New review posted for #{@review.meme.name}")
+    end
     @greeting = "Your meme has been reviewed!"
-
-    mail(to: review.meme.user.email , subject: "New review posted for #{@review.meme.name}")
   end
 end

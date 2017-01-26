@@ -1,0 +1,17 @@
+<% if current_user.admin %>
+  <ul class="reviews">
+    <% @reviews.each do |review| %>
+      <div class="review">
+        <h6> Posted by: <%= review.user.username %> </h6>
+        <li><% review.rating.times do %>♨️<% end %> - <%= review.body %>
+        <% if current_user.nil? == false && current_user.admin == true %>
+          <div class={review.id}><%= link_to "Delete Review", meme_reviews_path(review), method: :delete, id: "delete-#{review.id}" %></div>
+        <% end %></li>
+      </div>
+    <% end %>
+  </ul>
+<% else %>
+  <%= "Access denied, admin privileges required" %>
+<% end %>
+
+<%= link_to "Main Page", categories_path %>

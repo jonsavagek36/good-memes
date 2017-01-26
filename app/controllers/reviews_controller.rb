@@ -1,7 +1,14 @@
 class ReviewsController < ApplicationController
   before_action :authenticate_user!
 
- def new
+  def index
+    if current_user.admin
+      @reviews = Review.all
+    end
+  end
+
+
+  def new
    @meme = Meme.find(params[:meme_id])
    @user = current_user.id
    @review = Review.new
@@ -9,7 +16,7 @@ class ReviewsController < ApplicationController
    @rating_collection = Review::RATINGS
  end
 
- def create
+  def create
     @meme = Meme.find(params[:meme_id])
     @user = current_user
     @review = Review.new(params_strong)

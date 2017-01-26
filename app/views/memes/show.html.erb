@@ -1,6 +1,8 @@
 <div class="meme_show">
 <h1><%= @meme.name %></h1>
-<p>Created by: <%= @meme.user.username %></p>
+<% if @meme.user %>
+  <p>Created by: <%= @meme.user.username %></p>
+<% end %>
 <img src="<%= @meme.img_url%>">
 
 <% if current_user.nil? == false && current_user.admin == true %>
@@ -9,16 +11,8 @@
 <%= render "reviews/new" %>
 
 <h3>Reviews of <%= @meme.name %>:</h3>
-<ul class="reviews">
-  <% @reviews.each do |review| %>
-    <div class="review">
-      <h6> Posted by: <%= review.user.username %> </h6>
-      <li><% review.rating.times do %>♨️<% end %> - <%= review.body %>
-      <% if current_user.nil? == false && current_user.admin == true %>
-        <div class={review.id}><%= link_to "Delete Review", meme_reviews_path(review), method: :delete, id: "delete-#{review.id}" %></div>
-      <% end %></li>
-    </div>
-  <% end %>
-</ul>
 
 </div>
+<% if current_user.admin %>
+  <%= link_to "Delete Reviews", reviews_path %>
+<% end %>

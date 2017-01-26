@@ -35,5 +35,6 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
   scope "/admin" do
     resources :users, only: [:index, :destroy]
+    resources :reviews, only: [:index]
   end
 end
