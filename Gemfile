@@ -10,7 +10,6 @@ gem 'devise'
 gem 'responders'
 gem 'rb-readline'
 
-
 group :development do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
