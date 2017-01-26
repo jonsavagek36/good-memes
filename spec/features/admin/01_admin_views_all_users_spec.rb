@@ -6,7 +6,6 @@ feature 'view all users' do
     barb = FactoryGirl.create(:user, email: "bob@23.com", password: "meme123", username: "barb", admin: false)
     betty = FactoryGirl.create(:user, email: "bob@3.com", password: "meme123", username: "bigbetty", admin: false)
 
-
     sign_in betty
     sign_out betty
     sign_in barb

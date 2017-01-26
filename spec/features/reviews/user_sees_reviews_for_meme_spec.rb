@@ -1,4 +1,3 @@
-require 'rails_helper'
 
 feature "user sees list of reviews of the meme on the meme show page" do
   scenario "sees review for specific meme" do
