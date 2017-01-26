@@ -244,8 +244,8 @@ DEPENDENCIES
   puma (~> 3.0)
   rails (~> 5.0.0)
   rails_12factor
-  responders
   rb-readline
+  responders
   rspec-rails
   sass-rails (~> 5.0)
   shoulda-matchers

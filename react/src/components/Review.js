@@ -53,33 +53,45 @@ class Review extends Component {
   }
 
   render() {
-
     let hotRating = '';
     for (let i = 0; i < this.props.review.rating; i++) {
       hotRating += '♨️';
     }
 
     return (
-      <div>
-        <div>
-          Rating:
-          {hotRating}
+      <div className="review">
+        <div className="votes">
+          <div className='votestuff'>
+            <div>
+              Review by {this.props.user}
+            </div>
+            <div>
+              Rating:
+              {hotRating}
+            </div>
+          </div>
+          <div className='votestuff'>  
+            {this.props.review.body}
+          </div>
         </div>
-        <div>
-          {this.props.review.body}
+        <div className="votes">
+          <span className='votestuff'>
+            <Upvote
+              handleUpvote={this.handleUpvotes}
+              upvotes={this.state.upvotes}
+              review={this.props.review}
+              meme={this.props.meme}
+                />
+          </span>
+          <span className='votestuff'>
+            <Downvote
+              handleDownvote={this.handleDownvotes}
+              downvotes={this.state.downvotes}
+              review={this.props.review}
+              meme={this.props.meme}
+                />
+          </span>
         </div>
-        <Upvote
-          handleUpvote={this.handleUpvotes}
-          upvotes={this.state.upvotes}
-          review={this.props.review}
-          meme={this.props.meme}
-            />
-        <Downvote
-          handleDownvote={this.handleDownvotes}
-          downvotes={this.state.downvotes}
-          review={this.props.review}
-          meme={this.props.meme}
-            />
       </div>
     );
   }
