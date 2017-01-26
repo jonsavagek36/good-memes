@@ -15,9 +15,6 @@ feature "user can add reviews for a meme" do
     click_button "Submit Review"
 
     expect(page).to have_content "Review added successfully"
-    expect(page).to have_content "1"
-    expect(page).to have_content "Absolute garbage"
-    expect(page).to have_content bob.username
   end
 
   scenario "user adds a review for a meme unsuccessfully" do

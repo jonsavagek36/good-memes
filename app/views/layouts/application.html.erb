@@ -11,23 +11,25 @@
     <%= csrf_meta_tags %>
   </head>
 
-<nav class="top-bar">
-  <ul class="title-area">
-    <li class="name"><a class="logo" href="/">goodmemes 👌</a></li>
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Actor" />
 
-  </ul>
-  <section class="top-bar-section">
-    <ul class="left">
-      <li><%= form_tag(categories_path, :method => "get", id: "search-form") do %>
-        <%= text_field_tag :search, params[:search], placeholder: "Search Categories" %>
-      <% end %>🔍</li>
+<div class="top-bar">
+  <div class="top-bar-title">
+    <a class="logo" href="/">goodmemes 👌</a>
+  </div>
+  <div id="responsive-menu">
+  <div class="top-bar-left">
+    <ul class="menu">
+      <%= form_tag(categories_path, :method => "get", id: "search-form") do %>
+        <li><%= text_field_tag :search, params[:search], placeholder: "Search Categories" %></li>
+      <% end %>
     </ul>
-    <ul class="right">
-      <div id="responsive-menu">
+  </div>
+  <div class="top-bar-right">
         <% if user_signed_in? %>
           <ul class="dropdown menu" data-dropdown-menu>
             <li>
-            <a href="#">Logged in as <%= current_user.email %></a>
+            <%= link_to current_user.email, user_path(current_user.id) %>
               <ul class="menu vertical">
                 <% if current_user.admin == true  %>
                 <li><%= link_to 'View All Users', users_path, :class => 'navbar-link' %></li>
@@ -40,11 +42,11 @@
       <span><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %></span><!--
           --><span><%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></span>
         <% end %>
-      </div>
     </ul>
-    </ul>
-  </section>
-</nav>
+  </div>
+  </div>
+</div>
+
   <body>
 
     <% if notice %>

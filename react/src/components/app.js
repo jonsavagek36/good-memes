@@ -31,8 +31,8 @@ class App extends Component {
         <li><a href='/categories/new' id="new-cat" >Add New Category</a></li>
       </ul>
       </div>
-      );
-    }
+    );
+  }
 }
 
 export default App;
