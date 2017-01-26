@@ -28,7 +28,6 @@ class App extends Component {
   }
 
   render() {
-
     return (
       <div>
       <h1>THESE MEMES ARE ON 🔥🔥🔥 </h1>

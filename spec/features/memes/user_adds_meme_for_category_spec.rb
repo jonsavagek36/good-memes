@@ -3,8 +3,8 @@ require 'rails_helper'
 feature "user can add memes for category" do
 
   scenario "adds a meme for a category successfully" do
-    ek = Category.create(name: "Evil Kermit", image_url: "http://vignette1.wikia.nocookie.net/muppet/images/5/53/MMWtrailerNov20-0025.png/revision/latest?cb=20131121155320")
-    bob = User.create(email: "bob@123.com", password: "meme123", username: "bob", admin: false)
+    ek = FactoryGirl.create(:category)
+    bob = FactoryGirl.create(:user)
 
     visit '/'
     sign_in bob
@@ -24,8 +24,8 @@ feature "user can add memes for category" do
   end
 
   scenario "adds a meme for a category unsuccessfully" do
-    ek = Category.create(name: "Evil Kermit", image_url: "http://vignette1.wikia.nocookie.net/muppet/images/5/53/MMWtrailerNov20-0025.png/revision/latest?cb=20131121155320")
-    bob = User.create(email: "bob@123.com", password: "meme123", username: "bob", admin: false)
+    ek = FactoryGirl.create(:category)
+    bob = FactoryGirl.create(:user)
 
     visit categories_path
     visit category_path(ek)

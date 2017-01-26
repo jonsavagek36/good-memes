@@ -2,9 +2,14 @@
     <h1><%= @category.name %></h1>
     <img src='<%= @category.image_url %>' />
 <ul>
+<% if current_user.nil? == false && current_user.admin == true %>
+  <div class={@category.id}><%= link_to "Delete Category", category_path, method: :delete, id: "delete-category-#{@category.id}" %></div>
+<% end %>
 <% @memes.each do |meme| %>
-  <a id="meme" href="/memes/<%= meme.id %>"><img src='<%= meme.img_url %>'></a>
-
+  <a id="<%= meme.id %>" href="/memes/<%= meme.id %>"><img src='<%= meme.img_url %>'></a>
+  <% if current_user.nil? == false && current_user.admin == true %>
+    <div class={meme.id}><%= link_to "Delete Meme", category_meme_path(meme), method: :delete, id: "delete-meme-#{meme.id}" %></div>
+  <% end %>
 <% end %>
 </ul>
 

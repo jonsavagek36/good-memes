@@ -2,8 +2,8 @@ require 'rails_helper'
 
 feature "user visits meme categories" do
   scenario "user visits category directory and sees categories" do
-    evil_kermit = Category.create(name:"Evil Kermit", image_url: "kermit.com")
-    coffee_kermit = Category.create(name: "Coffee Kermit", image_url: "kermit2.com")
+    evil_kermit = FactoryGirl.create(:category, image_url: "kermit.com")
+    coffee_kermit = FactoryGirl.create(:category, name: "Coffee Kermit", image_url: "kermit2.com")
     visit categories_path
 
     expect(page).to have_xpath("//img[contains(@src,'kermit.com')]")
