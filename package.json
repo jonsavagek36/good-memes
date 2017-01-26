@@ -7,8 +7,7 @@
     "heroku-postbuild": "NODE_ENV=production npm run webpack -- -p",
     "start": "npm run webpack -- --watch",
     "test": "node_modules/.bin/karma start react/karma.conf.js",
-    "webpack": "node_modules/.bin/webpack --config ./react/webpack.config.js",
-    "postinstall": "cd client && npm install"
+    "webpack": "node_modules/.bin/webpack --config ./react/webpack.config.js"
   },
   "author": "",
   "license": "ISC",
@@ -49,8 +48,4 @@
     "webpack": "1.13.0",
     "whatwg-fetch": "1.0.0"
   },
-  "cacheDirectories": [
-    "node_modules",
-    "client/node_modules"
-  ],
 }
