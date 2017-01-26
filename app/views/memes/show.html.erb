@@ -4,7 +4,7 @@
 <img src="<%= @meme.img_url%>">
 
 <h3>Reviews of <%= @meme.name %>:</h3>
-<div id='reviewsDiv' data-id='<%= meme.id %>'>
+<div id='reviewsDiv' data-id='<%= @meme.id %>'>
 </div>
 <% if current_user.nil? == false && current_user.admin == true %>
     <div class={@meme.id}><%= link_to "Delete Meme", category_meme_path(@meme), method: :delete, id: "delete-meme-#{@meme.id}" %></div>
