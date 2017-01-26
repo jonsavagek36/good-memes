@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(version: 20170124152246) do
   end
 
   create_table "downvotes", force: :cascade do |t|
-    t.integer  "user_id",    null: false
-    t.integer  "review_id",  null: false
+    t.integer  "user_id"
+    t.integer  "review_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["review_id"], name: "index_downvotes_on_review_id", using: :btree
@@ -55,8 +55,8 @@ ActiveRecord::Schema.define(version: 20170124152246) do
   end
 
   create_table "upvotes", force: :cascade do |t|
-    t.integer  "user_id",    null: false
-    t.integer  "review_id",  null: false
+    t.integer  "user_id"
+    t.integer  "review_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["review_id"], name: "index_upvotes_on_review_id", using: :btree
@@ -78,8 +78,8 @@ ActiveRecord::Schema.define(version: 20170124152246) do
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
     t.string   "username"
-    t.string   "avatar"
     t.boolean  "admin",                  default: false
+    t.string   "avatar"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
     t.index ["username"], name: "index_users_on_username", unique: true, using: :btree
