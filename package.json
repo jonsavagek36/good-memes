@@ -48,5 +48,9 @@
     "redux-thunk": "2.1.0",
     "webpack": "1.13.0",
     "whatwg-fetch": "1.0.0"
-  }
+  },
+  "cacheDirectories": [
+    "node_modules",
+    "client/node_modules"
+  ],
 }
