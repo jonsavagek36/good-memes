@@ -22,6 +22,16 @@ ActiveRecord::Schema.define(version: 20170124152246) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "downvotes", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "review_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["review_id"], name: "index_downvotes_on_review_id", using: :btree
+    t.index ["user_id", "review_id"], name: "index_downvotes_on_user_id_and_review_id", unique: true, using: :btree
+    t.index ["user_id"], name: "index_downvotes_on_user_id", using: :btree
+  end
+
   create_table "memes", force: :cascade do |t|
     t.string   "name",        null: false
     t.string   "img_url",     null: false
@@ -42,6 +52,16 @@ ActiveRecord::Schema.define(version: 20170124152246) do
     t.datetime "updated_at", null: false
     t.index ["meme_id"], name: "index_reviews_on_meme_id", using: :btree
     t.index ["user_id"], name: "index_reviews_on_user_id", using: :btree
+  end
+
+  create_table "upvotes", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "review_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["review_id"], name: "index_upvotes_on_review_id", using: :btree
+    t.index ["user_id", "review_id"], name: "index_upvotes_on_user_id_and_review_id", unique: true, using: :btree
+    t.index ["user_id"], name: "index_upvotes_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|

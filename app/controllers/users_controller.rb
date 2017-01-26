@@ -3,6 +3,15 @@ class UsersController < ApplicationController
       @users = User.all
   end
 
+  def edit
+    @user = User.find(current_user.id)
+  end
+
+  def show
+    @user = User.find(params[:id])
+    @memes = @user.memes
+  end
+
   def archive_user
    if current_user.admin
      @user = User.find(params[:format])
@@ -19,6 +28,7 @@ class UsersController < ApplicationController
      redirect_to root_path
    end
  end
+
 
  def destroy
    @user = User.find(params[:id])

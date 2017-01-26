@@ -2,6 +2,7 @@
 <h1><%= @meme.name %></h1>
 <p>Created by: <%= @meme.user.username %></p>
 <img src="<%= @meme.img_url%>">
+
 <% if current_user.nil? == false && current_user.admin == true %>
   <div class={@meme.id}><%= link_to "Delete Meme", category_meme_path(@meme), method: :delete, id: "delete-meme-#{@meme.id}" %></div>
 <% end %>
@@ -19,4 +20,8 @@
     </div>
   <% end %>
 </ul>
+
 </div>
+
+<h3>Add your own review of <%= @meme.name %></h3>
+<%= render "reviews/new" %>

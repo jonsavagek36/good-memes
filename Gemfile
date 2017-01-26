@@ -7,7 +7,8 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'devise'
-
+gem 'responders'
+gem 'rb-readline'
 
 group :development do
   gem 'listen', '~> 3.0.5'
@@ -37,4 +38,5 @@ group :production do
 end
 
 gem "carrierwave"
+gem "mini_magick"
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
