@@ -180,3 +180,14 @@
   top: 5%;
   left: 1%;
 }
+
+.votes {
+  position: relative;
+  display: inline-block;
+  align-content: center;
+}
+
+.votestuff {
+  float: left;
+  margin: 12px;
+}

@@ -6,6 +6,7 @@ class MemesController < ApplicationController
     @reviews = @meme.reviews
     @review = Review.new
     @rating_collection = Review::RATINGS
+    @user = current_user.username
   end
 
   def new

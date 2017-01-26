@@ -7,7 +7,7 @@ class Reviews extends Component {
     this.state = {
       reviews: []
     };
-  } 
+  }
 
   componentDidMount() {
     fetch(`/api/v1/memes/${this.props.id}/reviews.json`)
@@ -30,6 +30,7 @@ class Reviews extends Component {
             key={idx}
             meme={this.props.id}
             review={review}
+            user={this.props.user}
               />
         );
       });
