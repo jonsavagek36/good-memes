@@ -2,7 +2,7 @@ require 'rails_helper'
 
 feature "user can add reviews for a meme" do
 
-  scenario "adds a review for a meme successfully" do
+  pending scenario "adds a review for a meme successfully" do
     bob = FactoryGirl.create(:user)
     ek = FactoryGirl.create(:category)
     pizza = FactoryGirl.create(:meme, category: ek, user: bob)
@@ -18,7 +18,7 @@ feature "user can add reviews for a meme" do
     expect(page).to have_content "Review added successfully"
   end
 
-  scenario "user adds a review for a meme unsuccessfully" do
+  pending scenario "user adds a review for a meme unsuccessfully" do
     bob = FactoryGirl.create(:user)
     ek = FactoryGirl.create(:category)
     pizza = FactoryGirl.create(:meme, category: ek, user: bob)
