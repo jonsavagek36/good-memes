@@ -2,6 +2,7 @@
   <ul class="reviews">
     <% @reviews.each do |review| %>
       <div class="review">
+        <h6> Meme: <%= review.meme.name %> </h6>
         <h6> Posted by: <%= review.user.username %> </h6>
         <li><% review.rating.times do %>♨️<% end %> - <%= review.body %>
         <% if current_user.nil? == false && current_user.admin == true %>
