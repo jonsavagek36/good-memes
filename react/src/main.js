@@ -17,7 +17,7 @@ $(document).ready(function() {
   if (document.getElementById('app')) {
     ReactDOM.render(
       <App />,
-      document.getElementById('app');
+      document.getElementById('app')
     );
   }
 });
