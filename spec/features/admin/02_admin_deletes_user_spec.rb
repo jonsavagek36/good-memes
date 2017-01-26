@@ -11,7 +11,7 @@ feature 'deleting a user' do
     visit '/'
     click_on "View All Users"
 
-    click_link("delete #{betty.id}")
+    click_link("delete-#{betty.id}")
 
     expect(page).to have_content(barb.email)
     expect(page).to_not have_content(betty.email)
