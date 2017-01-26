@@ -5,11 +5,9 @@
 <% if current_user.nil? == false && current_user.admin == true %>
   <div class={@category.id}><%= link_to "Delete Category", category_path, method: :delete, id: "delete-category-#{@category.id}" %></div>
 <% end %>
+<ul id="main-page">
 <% @memes.each do |meme| %>
-  <a id="<%= meme.id %>" href="/memes/<%= meme.id %>"><img src='<%= meme.img_url %>'></a>
-  <% if current_user.nil? == false && current_user.admin == true %>
-    <div class={meme.id}><%= link_to "Delete Meme", category_meme_path(meme), method: :delete, id: "delete-meme-#{meme.id}" %></div>
-  <% end %>
+  <li><a id="main-list-items" href="/memes/<%= meme.id %>"><img src='<%= meme.img_url %>'></a></li>
 <% end %>
 </ul>
 
