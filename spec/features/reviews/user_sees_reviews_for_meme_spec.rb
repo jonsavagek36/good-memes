@@ -1,6 +1,6 @@
 
 feature "user sees list of reviews of the meme on the meme show page" do
-  scenario "sees review for specific meme" do
+  pending scenario "sees review for specific meme" do
     bob = FactoryGirl.create(:user)
     ek = FactoryGirl.create(:category)
     pizza = FactoryGirl.create(:meme, category: ek, user: bob)

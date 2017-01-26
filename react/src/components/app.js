@@ -9,14 +9,19 @@ class App extends Component {
   }
 
   componentDidMount(){
+    this.updatePage();
+  }
+
+  updatePage() {
     $.ajax({
         method: "GET",
         url: "/categories.json",
       })
       .done(data => {
-        this.setState({
-          categories: data
-        });
+
+          this.setState({
+            categories: data
+          });
       });
   }
 
