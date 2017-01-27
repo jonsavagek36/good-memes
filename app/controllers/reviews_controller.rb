@@ -25,7 +25,7 @@ class ReviewsController < ApplicationController
     if @review.save
       UserMailer.notice(@review).deliver
       flash[:notice] = "Review added successfully"
-      redirect_to meme_path(@meme)
+      redirect_to controller: 'memes', action: 'show', id: params[:meme_id]
     else
       flash[:notice] = @review.errors.full_messages.to_sentence
       @reviews = @meme.reviews
