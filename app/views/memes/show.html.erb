@@ -7,7 +7,7 @@
 
 <h3>Reviews of <%= @meme.name %>:</h3>
 
-<div id='reviewsDiv' data-id='<%= @meme.id %>' data-user='<%= @user %>' data-avatar='<%= @avatar %>'>
+<div id='reviewsDiv' data-users='<%= @usershash.to_json %>' data-id='<%= @meme.id %>' data-user='<%= @user %>' data-avatar='<%= @avatar %>'>
 </div>
 
 <% if current_user.admin %>

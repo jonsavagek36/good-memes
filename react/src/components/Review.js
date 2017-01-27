@@ -57,8 +57,7 @@ class Review extends Component {
     for (let i = 0; i < this.props.review.rating; i++) {
       hotRating += '♨️';
     }
-
-    console.log(this.props.user);
+    let user_id = this.props.review.user_id;
 
     return (
       <div className='review'>
@@ -66,7 +65,7 @@ class Review extends Component {
           <img src={this.props.avatar} className="profile_thumb" />
         </div>
         <div className='review-div'>
-          Review by {this.props.user}
+          Review by {this.props.users[user_id]}
         </div>
         <div className='review-div'>
           Rating: {hotRating}

@@ -23,13 +23,13 @@ class Reviews extends Component {
   }
 
   render() {
-
       let reviews = this.state.reviews.map((review, idx) => {
         return (
           <Review
             key={idx}
             meme={this.props.id}
             review={review}
+            users={this.props.users}
             user={this.props.user}
             avatar={this.props.avatar}
               />

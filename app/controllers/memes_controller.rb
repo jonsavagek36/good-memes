@@ -6,6 +6,11 @@ class MemesController < ApplicationController
     @reviews = @meme.reviews
     @review = Review.new
     @rating_collection = Review::RATINGS
+    @users = User.all
+    @usershash = Hash.new
+    @users.each do |user|
+      @usershash[user.id] = user.username
+    end
     @user = current_user.username
     @avatar = current_user.avatar
   end
