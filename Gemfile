@@ -27,6 +27,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'valid_attribute'
   gem 'shoulda-matchers', require: false
+  gem "dotenv-rails"
 end
 
 group :test do
@@ -40,4 +41,5 @@ end
 
 gem "carrierwave"
 gem "mini_magick"
+gem "fog"
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
