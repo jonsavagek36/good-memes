@@ -3,7 +3,7 @@
 <% if @meme.user %>
   <p>Created by: <%= @meme.user.username %></p>
 <% end %>
-<img src="<%= @meme.img_url%>">
+<img src="<%= @meme.img_url%>" class="meme-show">
 
 <h3>Reviews of <%= @meme.name %>:</h3>
 
