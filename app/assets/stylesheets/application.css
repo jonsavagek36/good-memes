@@ -191,3 +191,47 @@
   float: left;
   margin: 12px;
 }
+
+.meme-search{
+  position: relative;
+  float: left;
+  width:  150px;
+  height: 150px;
+  background-position: 50% 50%;
+  background-repeat:   no-repeat;
+  background-size:     cover;
+  margin: 0.5em;
+  border-radius: 15px;
+  box-shadow: 5px 5px #3C3C3C;
+}
+
+.search-results {
+  display: inline-block;
+  list-style: none;
+  width: 100%;
+  clear: both;
+  overflow: auto;
+  margin-left: 0.4%;
+}
+
+.category-results {
+  position: relative;
+  float: center;
+  width: 30%;
+  height: auto;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0.5em;
+  border-radius: 15px;
+  box-shadow: 5px 5px #3C3C3C;
+}
+
+.base-img {
+  border: 5px solid #3C3C3C;
+  margin-bottom: 10px;
+}
+
+.meme-show {
+  border: 5px solid #3C3C3C;
+}
