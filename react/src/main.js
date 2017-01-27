@@ -1,8 +1,8 @@
 import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Reviews from './components/Reviews';
-import App from './components/App';
+import Reviews from 'Reviews';
+import App from 'App';
 
 $(document).ready(function() {
   if (document.getElementById('reviewsDiv')) {
