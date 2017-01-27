@@ -7,6 +7,7 @@ class MemesController < ApplicationController
     @review = Review.new
     @rating_collection = Review::RATINGS
     @user = current_user.username
+    @avatar = current_user.avatar
   end
 
   def new

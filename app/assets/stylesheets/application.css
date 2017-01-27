@@ -172,6 +172,20 @@
   background-color: #3C3C3C;
   color: white;
   overflow-wrap: break-word;
+  display: table;
+  width: 98%;
+  min-width: 960px;
+  table-layout: fixed;
+}
+
+.review-div {
+  top: 20px;
+  left: 3;
+  width: 200px;
+  float: left;
+  display: table-cell;
+  border: 1px solid #3C3C3C;
+  border-radius: 15px;
 }
 
 .profile_container {
@@ -179,17 +193,6 @@
   position: absolute;
   top: 5%;
   left: 1%;
-}
-
-.votes {
-  position: relative;
-  display: inline-block;
-  align-content: center;
-}
-
-.votestuff {
-  float: left;
-  margin: 12px;
 }
 
 .meme-search{
@@ -234,4 +237,8 @@
 
 .meme-show {
   border: 5px solid #3C3C3C;
+}
+
+.thumb-pic {
+  cursor: pointer;
 }

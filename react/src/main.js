@@ -14,10 +14,12 @@ $(document).ready(function() {
   if (document.getElementById('reviewsDiv')) {
     let id = parseInt(document.getElementById('reviewsDiv').dataset.id);
     let user = document.getElementById('reviewsDiv').dataset.user;
+    let avatar = document.getElementById('reviewsDiv').dataset.avatar;
     ReactDOM.render(
       <Reviews
         id={id}
         user={user}
+        avatar={avatar}
           />,
       document.getElementById('reviewsDiv')
     );
