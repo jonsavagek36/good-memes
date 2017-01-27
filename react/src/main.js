@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import App from './components/App';
 import Reviews from './components/Reviews';
 
-$(document).ready(function() {
+$(function() {
   if (document.getElementById('app')) {
     ReactDOM.render(
       <App />,
