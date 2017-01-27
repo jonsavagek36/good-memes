@@ -20,8 +20,11 @@ A rails app that allows users to post hot new memes from around the web. Users c
 1. First clone down the repo, bundle, load the schema, and run the seed file.
   ```
   $ git clone https://github.com/jonsavagek36/good-memes.git
+  
   $ bundle
+  
   $ npm install
+  
   $ rake db:setup
   ```
 2. Start the Rails server.
