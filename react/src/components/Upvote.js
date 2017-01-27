@@ -24,7 +24,7 @@ class Upvote extends Component {
 
     return (
       <div>
-        <div onClick={handleUpvote}>
+        <div onClick={handleUpvote} className="thumb-pic">
           👍 Upvote
         </div> {this.props.upvotes}
       </div>

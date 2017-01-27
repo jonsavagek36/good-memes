@@ -58,39 +58,37 @@ class Review extends Component {
       hotRating += '♨️';
     }
 
+    console.log(this.props.user);
+
     return (
-      <div className="review">
-        <div className="votes">
-          <div className='votestuff'>
-            <div>
-              Review by {this.props.user}
-            </div>
-            <div>
-              Rating:
-              {hotRating}
-            </div>
-          </div>
-          <div className='votestuff'>  
-            {this.props.review.body}
-          </div>
+      <div className='review'>
+        <div className='review-div'>
+          <img src={this.props.avatar} className="profile_thumb" />
         </div>
-        <div className="votes">
-          <span className='votestuff'>
-            <Upvote
-              handleUpvote={this.handleUpvotes}
-              upvotes={this.state.upvotes}
-              review={this.props.review}
-              meme={this.props.meme}
-                />
-          </span>
-          <span className='votestuff'>
-            <Downvote
-              handleDownvote={this.handleDownvotes}
-              downvotes={this.state.downvotes}
-              review={this.props.review}
-              meme={this.props.meme}
-                />
-          </span>
+        <div className='review-div'>
+          Review by {this.props.user}
+        </div>
+        <div className='review-div'>
+          Rating: {hotRating}
+        </div>
+        <div className='review-div'>
+          {this.props.review.body}
+        </div>
+        <div className='review-div'>
+        <Upvote
+          handleUpvote={this.handleUpvotes}
+          upvotes={this.state.upvotes}
+          review={this.props.review}
+          meme={this.props.meme}
+            />
+        </div>
+        <div className='review-div'>
+          <Downvote
+            handleDownvote={this.handleDownvotes}
+            downvotes={this.state.downvotes}
+            review={this.props.review}
+            meme={this.props.meme}
+              />
         </div>
       </div>
     );

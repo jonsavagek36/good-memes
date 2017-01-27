@@ -31,6 +31,7 @@ class Reviews extends Component {
             meme={this.props.id}
             review={review}
             user={this.props.user}
+            avatar={this.props.avatar}
               />
         );
       });
