@@ -4,11 +4,11 @@ import ReactDOM from 'react-dom';
 import App from './components/App';
 import Reviews from './components/Reviews';
 
-$(function() {
-  if (document.getElementById('app')) {
+$(document).ready(function() {
+  if (document.getElementById('App')) {
     ReactDOM.render(
       <App />,
-      document.getElementById('app')
+      document.getElementById('App')
     );
   }
   if (document.getElementById('reviewsDiv')) {
